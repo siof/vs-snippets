@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Task from task Factory</Title>
+            <Shortcut>task</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="csharp">
+                <![CDATA[System.Threading.Tasks.Task.Factory.StartNew(() => 
+                    {	
+                    });]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Task from task Factory</Title>
+            <Shortcut>taskc</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="csharp">
+                <![CDATA[System.Threading.Tasks.Task.Factory.StartNew(() => 
+                    {	
+                    
+                    }).ContinueWith(action => 
+                    {
+                       
+                    });]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

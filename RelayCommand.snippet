@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>command</Title>
+			<Shortcut>command</Shortcut>
+			<Description>Code snippet for Commands WPF</Description>
+			<Author>Marek Wisła</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>command</ID>
+					<ToolTip>Command name</ToolTip>
+					<Default>RelayCommand</Default>
+				</Literal>
+				<Literal>
+					<ID>command_field</ID>
+					<ToolTip>The variable command backing this property</ToolTip>
+					<Default>relayCommand</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[#region $command$
+				
+				RelayCommand _$command_field$Command;
+				public ICommand $command$Command
+				{
+					get
+					{
+						if (_$command_field$Command == null)
+						{
+							_$command_field$Command = new RelayCommand(param => $command$CommandExecute(param), param => $command$CommandCanExecute(param));
+						}
+						return _$command_field$Command;
+					}
+				}
+				void $command$CommandExecute(object param)
+				{
+
+				}
+				bool $command$CommandCanExecute(object param)
+				{
+					return true;
+				}
+				
+				#endregion$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
